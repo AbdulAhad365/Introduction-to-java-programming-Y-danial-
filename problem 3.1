@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+import java.util.SortedMap;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the value of    'a','b','c'\n seperated by Gap:_ _ _");
+        //   To gain more than 1 input in a line
+        double a=s.nextDouble();
+        double b=s.nextDouble();
+        double c=s.nextDouble();
+
+        // Taking DISC
+        double disc=((Math.pow(b,2.0))-(4*a*c));
+        System.out.println(disc);
+        //check conditions:
+        if (disc<0){
+            System.out.println("The equation has no roots");
+        }
+        else if (disc==0) {
+            //root1==root2==-b/a   disc==0
+            double root=-((b)/2.0);
+            System.out.println("The equation has one root "+root);
+            }
+        else {
+            // root2=(-b+ Math.sqrt((b^2-4ac)))/2a
+            //root2=(-b- Math.sqrt((b^2-4ac)))/2a
+            double root1=(-b+ Math.sqrt((Math.pow(b,2)-4*a*c)))/(2.0d*a);
+            double root2=(-b- Math.sqrt((Math.pow(b,2)-4*a*c)))/(2.0d*a);
+            System.out.println("So the roots are "+root1+" and "+root2);
+        }
+    }
+}
