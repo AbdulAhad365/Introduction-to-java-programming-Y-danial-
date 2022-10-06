@@ -1,0 +1,46 @@
+# Introduction-to-java-programming-Y-danial-
+import java.util.Scanner;
+import java.util.Random;
+class Scratch {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);    //Scanner class for taking the input
+
+        System.out.println("HELLO \n WANT TO PLAY THE _______INTERESTING GAME_________");
+        System.out.println("Enter two numbers seperated by 'das'");
+        // Creating a random function class
+        Random rand=new Random();
+
+        int num1=rand.nextInt(1,100);    //for taking random num from 1-100 only in integer type
+        int num2=rand.nextInt(1,200);
+
+        int comp=num2+num1;                              //computer will check
+        System.out.println(num1+" + "+num2+" = ");  //Question statement
+        int user=s.nextInt();    //user input
+        if (user==comp){
+            System.out.println("Right Answer");
+            System.out.println(num1+" + "+num2+" + "+user+" = ");
+            int user_again_value=s.nextInt();
+            int result2=num2+num1+user;
+            if (result2==user_again_value){
+                System.out.println("You score 2/2");
+            }
+            else {
+                System.out.println("You scored 2/1");
+            }
+        }
+        else {
+            System.out.println("You answered wrong answer ");
+            System.out.println(num1+" + "+num2+" + "+user+" = ");
+            int user_again_value=s.nextInt();
+            int result2=num2+num1+user;
+            if (result2==user_again_value){
+                System.out.println("You score 2/1");
+            }
+            else {
+                System.out.println("You scored 2/0");
+            }
+        }
+
+
+    }
+}
